@@ -263,6 +263,10 @@ angular.module('listenone').controller('PlayController', [
       $scope.saveLocalSettings();
     };
 
+    $scope.downloadCurrent = () => {
+      l1Player.downloadCurrent();
+    };
+
     $rootScope.openGithubAuth = GithubClient.github.openAuthUrl;
     $rootScope.GithubLogout = () => {
       GithubClient.github.logout();

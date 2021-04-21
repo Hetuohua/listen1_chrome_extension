@@ -1730,6 +1730,11 @@
                   <div class="detail" ng-if="playlist.length > 0">
                     <div class="ctrl">
                       <a
+                        title="下载"
+                        ng-click="downloadCurrent()"
+                        ><span class="icon li-link"></span
+                      ></a>
+                      <a
                         ng-click="showDialog(0, currentPlaying)"
                         title="{{_ADD_TO_PLAYLIST}}"
                       >

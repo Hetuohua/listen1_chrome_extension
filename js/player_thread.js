@@ -487,6 +487,12 @@
         this.playlist[idx].disabled = disabled;
       }
     }
+    
+    downloadCurrentAudio() {
+      const data = this.playlist[this.index];
+      const url = this._media_uri_list[data.url || data.id];
+      window.open(url, '_blank').focus();
+    }
 
     async sendFrameUpdate() {
       const data = {

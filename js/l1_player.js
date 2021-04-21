@@ -125,6 +125,11 @@
         player.setNewPlaylist(list);
       });
     },
+    downloadCurrent() {
+      getPlayerAsync(mode, (player) => {
+        player.downloadCurrentAudio();
+      });
+    },
     getTrackById(id) {
       if (!l1Player.status.playlist) return null;
       return l1Player.status.playlist.find((track) => track.id === id);
